@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+    <title>Prepare for Interview</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/hover.zoom.js"></script>
+    <script src="assets/js/hover.zoom.conf.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- Static navbar -->
+    <div class="navbar navbar-fixed-top navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">OOP's</a></li>
+                    <li><a href="c_sharp.html">C#</a></li>
+                    <li><a href="about.html">MVC</a></li>
+                    <li><a href="blog.html">.Net Core</a></li>
+                    <li><a href="contact.html">Angular</a></li>
+                    <li><a href="contact.html">Typescript</a></li>
+                    <li><a href="contact.html">Sql Server</a></li>
+                    <li><a href="contact.html">Entity Framework</a></li>
+                    <li><a href="contact.html">Xamarin</a></li>
+                    <li><a href="contact.html">Others</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <!-- +++++ Projects Section +++++ -->
+    <!-- +++++ First Post +++++ -->
+    <div id="grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h3>
+                        Difference Between Const, ReadOnly and Static ReadOnly in C#
+                    </h3>
+                    <p>
+                        <bd>Last updated: february 18, 2021</bd>
+                    </p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div>
+                        <h4>1. Const</h4>
+                    </div>
+                    <p>
+                        Const is nothing but "constant", a variable of which the value is constant but at compile time. And it's mandatory to assign a value to it. By default a const is static and we cannot change the value of a const variable throughout the entire program.
+                    </p>
+					<p>
+					<img alt="Csharp-Const-ReadOnly-and-StaticReadOnly.jpg" width="494" height="126" border="0" src="./assets/img/Csharp-Const-ReadOnly-and-StaticReadOnly1.jpg">
+					</p>
+					<div>
+						<p>
+						Here I have created a class named Variables and defined all three variables, so first let's play with const.
+						</p>
+						<p>
+					<img alt="Csharp-Const-ReadOnly-and-StaticReadOnly.jpg" width="494" height="126" border="0" src="./assets/img/Csharp-Const-ReadOnly-and-StaticReadOnly2.jpg">
+					</p>
+					</div>
+					<div>
+					<p>
+					Here I tried to de-initialize the const variable, it gaves me an error like "A const field requires a value to be provided". Ok now I initialize a value for this variable and try to change it further in the class.
+					</p>
+					<p>
+					<img alt="Csharp-Const-ReadOnly-and-StaticReadOnly.jpg" width="501" height="366" border="0" src="./assets/img/Csharp-Const-ReadOnly-and-StaticReadOnly3.jpg">
+					</p>
+					</div>
+					
+					<div>
+					<p>
+						Here I have created a static constructor, default constructor, parameterized constructor and a Simple Method. I tried to change the value of the const variable everywhere but once I assign the value, I am unable to change it again since when I do it gives me a compile time error as you can see in the snapshot above.
+					</p>
+					<p>
+					Now let's on to the readonly keyword.
+					</p>
+					</div>
+					<div>
+                        <h4>2. Readonly</h4>
+						<p>
+						Readonly is the keyword whose value we can change during runtime or we can assign it at run time but only through the non-static constructor. Not even a method. Let's see:
+					</p>
+					<p>
+					<img alt="Csharp-Const-ReadOnly-and-StaticReadOnly.jpg" width="619" height="197" border="0" src="./assets/img/Csharp-Const-ReadOnly-and-StaticReadOnly4.jpg">
+					</p>
+					<p>
+					Here first I try to initialize the value in the static constructor. It gives me an error. Which you can see above. Now I try to change the value in a method, see what happened,
+					</p>
+					<p>
+					<img alt="Csharp-Const-ReadOnly-and-StaticReadOnly.jpg" width="541" height="223" border="0" src="./assets/img/Csharp-Const-ReadOnly-and-StaticReadOnly5.jpg">
+					</p>
+					<p>
+					Here, it is also giving an error that you can only assign a value either through a variable or a constructor. Now try to change the value in the default constructor.
+					</p>
+					<p>
+					<img alt="Csharp-Const-ReadOnly-and-StaticReadOnly.jpg" width="543" height="366" border="0" src="./assets/img/Csharp-Const-ReadOnly-and-StaticReadOnly6.jpg">
+					</p>
+					<p>
+					Now in the snapshot above you can see it's built successfully without an error, warning or messages. Let's check if there is a runtime error. OK.
+					</p>
+					<p>
+					<img alt="Csharp-Const-ReadOnly-and-StaticReadOnly.jpg" width="650" height="369" border="0" src="./assets/img/Csharp-Const-ReadOnly-and-StaticReadOnly7.jpg">
+					</p>
+					<p>
+					Now here we can see that there is not a runtime error and the value was assigned successfully to the Readonly variable. Now one gotcha is, now that you have assigned the value, can you change this value again ??? Let's try to change the value again.
+					</p>
+					<p>
+						<img alt="Csharp-Const-ReadOnly-and-StaticReadOnly.jpg" width="556" height="370" border="0" src="./assets/img/Csharp-Const-ReadOnly-and-StaticReadOnly8.jpg">
+					</p>
+					<p>
+					Here I created a parameterized constructor and created a new object, and passing a value as "Hello Frend'z" and as I built it, it gave me the result "Build Succeeded". Now let's move ahead and check for a runtime error:
+					</p>
+					<p>
+						<img alt="Csharp-Const-ReadOnly-and-StaticReadOnly.jpg" width="650" height="407" border="0" src="./assets/img/Csharp-Const-ReadOnly-and-StaticReadOnly9.jpg">
+					</p>
+					<p>
+					See guys. There is no runtime error !! And the value can be changed again and again through a constructor.
+					</p>
+					<p>
+					Now move ahead to Static Readonly variables.
+					</p>
+                    </div>
+					<div>
+						<h4>3. Static ReadOnly</h4>
+						<p>
+							A Static Readonly type variable's value can be assigned at runtime or assigned at compile time and changed at runtime. But this variable's value can only be changed in the static constructor. And cannot be changed further. It can change only once at runtime. Let's understand it practically.
+						</p>
+						<p>
+							<img alt="Csharp-Const-ReadOnly-and-StaticReadOnly.jpg" width="377" height="286" border="0" src="./assets/img/Csharp-Const-ReadOnly-and-StaticReadOnly10.jpg">
+						</p>
+						<p>
+							Now in the preceding you can see that I used two variables, one is not assigned and another is assigned, and the static constructor. Now in the static constructor you can see that the unassigned variable is being assigned and the assigned value is being changed. And there is no compile time error. Further I try to again change this variable's value. See what happened:
+						</p>
+						<p>
+							<img alt="Csharp-Const-ReadOnly-and-StaticReadOnly.jpg" width="570" height="406" border="0" src="./assets/img/Csharp-Const-ReadOnly-and-StaticReadOnly11.jpg">
+						</p>
+						<p>
+							As you can see in the above, I created Default, Parameterized Constructor and Method and tried to change the value again here. But I am getting a compile time error for all.
+						</p>
+					</div>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /grey -->
+    <!-- +++++ Footer Section +++++ -->
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>
+                        DISCLAIMER:
+                        This site is for educational purposes only!!
+                        I hereby declare that I do not own the rights to this content. All rights belong to the owner. No Copyright Infringement.
+                    </p>
+                </div>
+                <!-- /col-lg-4 -->
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
